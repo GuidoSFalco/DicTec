@@ -6,13 +6,11 @@ import { AppComponent } from './app.component';
 
 // Paginas
 import { InicioComponent } from './inicio/inicio.component';
-import { SoftwareComponent } from './software/software.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent,
-    SoftwareComponent
+    InicioComponent
   ],
   imports: [
     BrowserModule,
