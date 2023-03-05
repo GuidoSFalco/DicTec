@@ -6,8 +6,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SoftwareComponent } from './software/software.component';
 
 const routes: Routes = [
-  {path:'',component:InicioComponent},
-  {path:'categoria/software',component:SoftwareComponent},
+  {path:'fsfgsgseg',component:InicioComponent},
+  {path:'',component:SoftwareComponent},
 ];
 
 @NgModule({
