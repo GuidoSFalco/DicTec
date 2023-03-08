@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- Lista de todos los compontentes -->
+
+    <!-- 
+        HARDWARES:
+        memoria ram, memoria rom, placa de video, placa de sonido, (disco externo, pendrive), dispositivos de salida, dispositivos perifericos, computadora de escritorio, notebook, netbook
+
+        SOFTWARES:
+        https://desdev.tools/: coleccion de herramientas para desarrolladores, jitter.video, https://chat.openai.com/ (chat GPT), aifindy
+     -->
+     <div class="header">
+        <div class="header__elemento">
+
+            <a class="elemento" href="/">Inicio</a>
+            <a class="icono" href="">
+                <span class="material-symbols-outlined">
+                home
+                </span>
+            </a>
+        </div>
+        <div class="header__elemento">
+
+            <a class="elemento">Tienda</a>
+            <a class="icono" href="">
+                <span class="material-symbols-outlined">
+                    shopping_bag
+                </span>
+            </a>
+        </div>
+        <!-- <div class="header__elemento">
+            <a>Noticias</a>
+        </div> -->
+        <div class="header__elemento" (click)="OpenCloseDropdown()">
+            <a class="elemento">Categorías</a>
+            <a class="icono" href="">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </a>
+
+            <div class="dropdown">
+                <ul>
+                    <li><a href="">Hardware</a></li>
+                    <li><a href="categoria/software">Software</a></li>
+                    <li><a href="">Inteligencia Artificial</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="sidebar__header">
+            <div class="input">
+                <span>Filtrar</span>
+                <input type="text">
+            </div>
+            <a class="btn-sidebar" (click)="OpenCloseSidebar()">
+                <span class="icono material-symbols-outlined">
+                    sort
+                </span>
+            </a>
+        </div>
+        <div class="sidebar__filtros">
+            <a style="background: green; color: white;" href="" class="imagenes" (click)="click()" (dblclick)="dbl()">Imagenes</a>
+            <a style="background: rgb(115, 189, 214); color: white;" href="">Texto</a>
+            <a style="background: orange; color: white;" href="">Sitio web</a>
+            <a href=""></a>
+            <a href=""></a>
+        </div>
+    </div>
+
+    <div class="contenido">
+        <article>
+            <div class="articulo__imagen">
+                <img src="https://i.ibb.co/n3bh4Kx/image.png" alt="image" border="0">
+            </div>
+            <div class="articulo__detalles">
+                <div class="texto">
+                    <a href="https://www.validatorai.com/">
+                        <span class="titulo">Validatorai.com</span>
+                    </a>
+
+                    <span class="descripcion">Opina sobre tu sitio web y te da consejos para lograr el mejor resultado posible.</span>
+                    
+                </div>
+                <div class="acciones">
+                    <div class="acciones--item">
+                        <div class="item">
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                            <span>
+                                Texto
+                            </span>
+                        </div>
+                        
+                        <span class="material-symbols-outlined flecha">
+                            chevron_right
+                        </span>
+                    </div>
+
+                    <div class="acciones--item" style="background: #04BC4E;">
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+                        <span>
+                            Ingresar
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </article>
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- 
+<article>
+    <div class="articulo">
+
+        <div class="articulo__imagen">
+            <img src="https://i.ibb.co/n3bh4Kx/image.png" alt="image" border="0">
+        </div>
+        <div class="articulo__texto">
+            <div class="conjunto-tituloydescripcion">
+
+                <a href="https://www.validatorai.com/">
+                    <span class="titulo">Validatorai.com</span>
+                </a>
+                <span class="descripcion">Opina sobre tu sitio web y te da consejos para lograr el mejor resultado posible.</span>
+            </div>
+            
+            <div class="etiquetas">
+                <div class="etiqueta">
+
+                    <span class="material-symbols-outlined">
+                        edit
+                    </span>
+                </div>
+                <a style="background: rgb(115, 189, 214);">Texto</a>
+                <span style="background: orange;">Sitio web</span>
+            </div>
+        </div>
+    </div>
+</article> -->

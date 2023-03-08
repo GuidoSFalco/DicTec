@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- Lista de todos los compontentes -->
+
+    <!-- 
+        HARDWARES:
+        memoria ram, memoria rom, placa de video, placa de sonido, (disco externo, pendrive), dispositivos de salida, dispositivos perifericos, computadora de escritorio, notebook, netbook
+
+        SOFTWARES:
+        https://desdev.tools/: coleccion de herramientas para desarrolladores, jitter.video, https://chat.openai.com/ (chat GPT), aifindy
+     -->
+     <div class="header">
+        <div class="header__elemento">
+
+            <a class="elemento" href="/">Inicio</a>
+            <a class="icono" href="">
+                <span class="material-symbols-outlined">
+                home
+                </span>
+            </a>
+        </div>
+        <div class="header__elemento">
+
+            <a class="elemento">Tienda</a>
+            <a class="icono" href="">
+                <span class="material-symbols-outlined">
+                    shopping_bag
+                </span>
+            </a>
+        </div>
+        <!-- <div class="header__elemento">
+            <a>Noticias</a>
+        </div> -->
+        <div class="header__elemento" (click)="OpenCloseDropdown()">
+            <a class="elemento">Categorías</a>
+            <a class="icono" href="">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </a>
+
+            <div class="dropdown">
+                <ul>
+                    <li><a href="">Hardware</a></li>
+                    <li><a href="categoria/software">Software</a></li>
+                    <li><a href="">Inteligencia Artificial</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="sidebar__header">
+            <div class="input">
+                <span>Filtrar</span>
+                <input type="text">
+            </div>
+            <a class="btn-sidebar" (click)="OpenCloseSidebar()">
+                <span class="icono material-symbols-outlined">
+                    sort
+                </span>
+            </a>
+        </div>
+        <div class="sidebar__filtros">
+            <a style="background: green; color: white;" href="" class="imagenes" (click)="click()" (dblclick)="dbl()">Imagenes</a>
+            <a style="background: rgb(115, 189, 214); color: white;" href="">Texto</a>
+            <a style="background: orange; color: white;" href="">Sitio web</a>
+            <a href=""></a>
+            <a href=""></a>
+        </div>
+    </div>
+
+    <div class="articulos">
+        <article>
+            <div class="articulo">
+
+                <div class="articulo__imagen">
+                    <img src="https://i.ibb.co/n3bh4Kx/image.png" alt="image" border="0">
+                </div>
+                <div class="articulo__texto">
+                    <div class="conjunto-tituloydescripcion">
+
+                        <a href="https://www.validatorai.com/">
+                            <span class="titulo">Validatorai.com</span>
+                        </a>
+                        <span class="descripcion">Opina sobre tu sitio web y te da consejos para lograr el mejor resultado posible.</span>
+                    </div>
+                    
+                    <div class="etiquetas">
+                        <div class="etiqueta">
+
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                        </div>
+                        <a style="background: rgb(115, 189, 214);">Texto</a>
+                        <span style="background: orange;">Sitio web</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        
+        
+        <!-- <article>
+            <div class="articulo__imagen">
+                <img src="https://i.ibb.co/KLH0Gkp/image.png" alt="image" border="0">
+            </div>
+            <div class="articulo__texto">
+
+                <a href="https://www.namingmagic.com/">
+                    <span class="titulo">Naming Magic</span>
+                </a>
+                <span class="descripcion">No se te ocurre ningún nombre para tu próximo sitio web? Solo le das una descripción de tu página, un par de palabras clave, y te dará un par de posibles nombres.</span>
+                
+            </div>
+        </article> -->
+
+        <!-- <article>
+            <div class="articulo__imagen">
+                <img src="https://i.ibb.co/2yH72y7/image.png" alt="image" border="0">
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <a href="https://looka.com/"><p>Looka</p></a>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Te gustaría un logo para tu empresa, sitio web, o lo que sea? Esta página, en base a los datos que le proporciones, te dára una gran lista de posibles logos con buenos estilos sin necesidad de saber sobre diseño.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                <img src="https://i.ibb.co/gj5kwQc/image.png" alt="image" border="0">
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <a href="https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F">
+                        <p>Mid Journey</p>
+                    </a>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>
+                        Esta IA, es capaz de generar una enorme cantidad de imágenes, incluso super-realistas tan solo describiendo lo que quieras que te dibuje. 
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://durable.co/">Durable.co</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Te permite crear un sitio web en segundos tan solo especificando el tipo de sitio y un nombre para identificarlo.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://www.sitekick.ai/">Sitekick</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Genera landing pages</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://www.futurepedia.io/">Futurepedia.io</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Conjunto de herramientas de Inteligencia Artificial.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://chat.openai.com/chat">Chat GPT</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p></p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://openai.com/dall-e-2/">DALL-E 2</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Esta IA, es capaz de generar una enorme cantidad de imágenes, incluso super-realistas tan solo describiendo lo que quieras que te dibuje. 
+                        
+                        </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://www.watermarkremover.io/es">Water Mark Remover</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Esta página te permite quitar la marca de agua de cualquier foto.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://botnation.ai/en/">BotNation</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Permite crear un bot con gran facilidad, útil para administrar mejor tus chats de negocios con tus clientes.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://quillbot.com/">QuillBot</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Realiza cambios en el texto que le envias, es una buena ayuda para cuando te piden que expliques algo con tu palabras, o más bien, con otras palabras, sin mucho esfuerzo.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://aifindy.com/">AIFINDY</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Conjunto de herramientas de Inteligencia Artificial.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://magicstudio.com/magiceraser">Magic Eraser</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Elimina objetos indeseados de imágenes.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://www.remove.bg/es">Remove BG</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Remueve el fondo de pantalla de cualquier imágen.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://uizard.io/">Uizard.io</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Permite crear maquetas y prototipos de aplicaciones web o móviles en segundos.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://www.capcut.com/es-la/">CapCut</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p></p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://www.beatoven.ai/">Beatoven</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Crea música desde cero y sin copywrite (hasta te da licencia de uso si es para subir a YouTube).</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://diffusionbee.com/">Diffusionbee</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Creador de imágenes para macOS</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://donotpay.com/">Do not pay</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Abogado con Inteligencia Artificial.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://jenni.ai/">Jenni</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Potencie su escritura con el asistente de escritura de IA más avanzado.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="">Tome</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p></p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="">Timely</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p></p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://murf.ai/">Murf</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Creador de voces realistas.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://www.perplexity.ai/">Perplexity</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p></p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://reescribirtextos.com/">Reescribir Textos</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Realiza cambios en el texto que le envias, es una buena ayuda para cuando te piden que expliques algo con tu palabras, o más bien, con otras palabras, sin mucho esfuerzo.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://app.writesonic.com/">WriteSonic</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Realiza cambios en el texto que le envias, es una buena ayuda para cuando te piden que expliques algo con tu palabras, o más bien, con otras palabras, sin mucho esfuerzo.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://you.com/search?q=who+are+you&tbm=youchat&cfr=chat">YOU
+
+                    </a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Realiza cambios en el texto que le envias, es una buena ayuda para cuando te piden que expliques algo con tu palabras, o más bien, con otras palabras, sin mucho esfuerzo.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://reescribirtextos.com/">Reescribir Textos</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Realiza cambios en el texto que le envias, es una buena ayuda para cuando te piden que expliques algo con tu palabras, o más bien, con otras palabras, sin mucho esfuerzo.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://reescribirtextos.com/">Reescribir Textos</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Realiza cambios en el texto que le envias, es una buena ayuda para cuando te piden que expliques algo con tu palabras, o más bien, con otras palabras, sin mucho esfuerzo.</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="articulo__imagen">
+                
+            </div>
+            <div class="articulo__texto">
+
+                <div class="articulo__titulo">
+                    <h4><a href="https://reescribirtextos.com/">Reescribir Textos</a></h4>
+                </div>
+                <div class="articulo__descripcion">
+                    <p>Realiza cambios en el texto que le envias, es una buena ayuda para cuando te piden que expliques algo con tu palabras, o más bien, con otras palabras, sin mucho esfuerzo.</p>
+                </div>
+            </div>
+        </article> -->
+        
+    </div>
+</body>
+</html>
