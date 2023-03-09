@@ -117,8 +117,6 @@ body {
     .sidebar {
         background: rgb(255, 255, 255); 
         width: 180px;
-        // height: auto;
-        height: 60px;
         height: 70vh;
         float: left;
         margin-top: 20px;
@@ -207,16 +205,20 @@ body {
         float: right;
 
         article {
-            width: 80%;
+            width: 90%;
+            padding-right: 80px;
             height: auto;
             display: flex;
+            margin-top: 100px;
+            margin-bottom: 100px;
 
             .articulo__imagen {
                 background: lightblue;
-                width: 800px;
+                width: 700px;
                 height: 300px;
 
                 img {
+                    background: green;
                     width: 100%;
                     height: 100%;
                 }
@@ -225,8 +227,15 @@ body {
             .articulo__detalles {
                 width: 800px;
                 height: 370px;
-                margin-left: -140px;
+                margin-left: -180px;
+                margin-right: 50px;
                 margin-top: 100px;
+                display: flex;
+
+                .seccion1 {
+                    width: 90%;
+                    height: 100%;
+                }
 
                 .texto {
                     background: white;
@@ -242,6 +251,14 @@ body {
                         
                     }
 
+                    span:nth-child(1) {
+                        transition: .3s;
+                    }
+
+                    span:nth-child(1):hover {
+                        transform: translateX(15px);
+                    }
+
                     .descripcion {
                         color: #898989;
                         font-family: 'Inter', sans-serif !important;
@@ -250,15 +267,15 @@ body {
                     }
                 }
 
-                .acciones {
+                .busqueda {
                     width: 95%;
                     height: 15%;
                     margin-top: -25px;
                     float: right;
                     display: flex;
 
-                    .acciones--item {
-                        background: orange;
+                    .busqueda--item {
+                        background: #04BC4E;
                         width: 50px;
                         height: 50px;
                         display: flex;
@@ -276,49 +293,54 @@ body {
                             margin: auto;
                             margin-inline: 10px;
                         }
+                        
 
-                        .item {
-                            height: 100%;
-                            width: 50px;
-                            border-radius: 50px;
-                            display: flex;
-                            flex-direction: column;
-                            box-shadow: 0 0 8px rgba(0,0,0,.2);
-                            
-
-                            span {
-                                margin: auto;
-                                margin-top: 13px;
-                            }
-
-                            span:nth-child(2) {
-                                display: block;
-                            }
-
-                            span:nth-child(1):hover .acciones--item{
-                                overflow:visible;
-                            }
-
-                        }
-
-                        span:nth-child(1) { // posicionar bien la lupa
+                        span { // posicionar bien la lupa
                             margin-left: 12px;
                         }
 
-                    }
-                    .acciones--item:nth-child(1) {
-                        justify-content: end;
+                        a {
+                            margin-left: -8px;
+                        }
                     }
 
-                    .acciones--item:nth-child(2) {
+                    .busqueda--item:hover {
+                        width: 140px;
+                    }
+
+
+                }
+
+                .acciones {
+                    width: 160px;
+                    height: 85%;
+                    margin-left: -20px;
+
+                    .acciones--item {
+                        background: orange;
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        border-radius: 50px;
+                        margin: 15px 0;
+                        transition: .3s;
                         overflow: hidden;
+                        cursor: pointer;
+
+                        span {
+                            margin: auto;
+                            margin-inline: 10px;
+                            color: white;
+                        }
+
+                        span:nth-child(1) {
+                            margin-left: 13px;
+                        }
                     }
 
                     .acciones--item:hover {
                         width: 140px;
                     }
-
-
                 }
             }
         }
